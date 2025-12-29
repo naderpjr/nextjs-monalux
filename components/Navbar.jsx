@@ -10,7 +10,7 @@ export default function Navbar() {
 
     return <div className='relative w-full h-40 flex items-center justify-center'>
         <div className='relative flex align-center'>
-            <GooeyNav
+            {/* <GooeyNav
                 items={items}
                 particleCount={15}
                 particleDistances={[90, 10]}
@@ -19,7 +19,8 @@ export default function Navbar() {
                 animationTime={600}
                 timeVariance={300}
                 colors={[1, 2, 3, 1, 2, 3, 1, 4]}
-            />
+            /> */}
+
         </div>
     </div>
 
