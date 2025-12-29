@@ -1,4 +1,5 @@
 import Beams from "@/components/Beams";
+import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
@@ -16,5 +17,6 @@ export default function Home() {
       />
     </div>
     <Navbar />
+    <Header />
   </div>
 }
