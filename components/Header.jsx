@@ -6,7 +6,7 @@ export default function Header() {
         <GradientText
             colors={["#0e0e0e", "#ffffff", "#0e0e0e"]}
             animationSpeed={5}
-            className="text-3xl p-4 md:text-7xl lg:text-8xl -mt-30"
+            className="text-3xl p-4 md:text-7xl lg:text-8xl mt-60"
         >
             Monalux Studio
         </GradientText>

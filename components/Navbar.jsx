@@ -1,27 +1,59 @@
-import GooeyNav from '@/components/GooeyNav';
+import BubbleMenu from './BubbleMenu'
 
 export default function Navbar() {
 
+
     const items = [
-        { label: "Home", href: "#" },
-        { label: "About", href: "#" },
-        { label: "Contact", href: "#" },
+        {
+            label: 'home',
+            href: '#',
+            ariaLabel: 'Home',
+            rotation: -8,
+            hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' }
+        },
+        {
+            label: 'about',
+            href: '#',
+            ariaLabel: 'About',
+            rotation: 8,
+            hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' }
+        },
+        {
+            label: 'projects',
+            href: '#',
+            ariaLabel: 'Projects',
+            rotation: 8,
+            hoverStyles: { bgColor: '#f59e0b', textColor: '#ffffff' }
+        },
+        {
+            label: 'blog',
+            href: '#',
+            ariaLabel: 'Blog',
+            rotation: 8,
+            hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
+        },
+        {
+            label: 'contact',
+            href: '#',
+            ariaLabel: 'Contact',
+            rotation: -8,
+            hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
+        }
     ];
 
-    return <div className='relative w-full h-40 flex items-center justify-center'>
-        <div className='relative flex align-center'>
-            {/* <GooeyNav
-                items={items}
-                particleCount={15}
-                particleDistances={[90, 10]}
-                particleR={100}
-                initialActiveIndex={0}
-                animationTime={600}
-                timeVariance={300}
-                colors={[1, 2, 3, 1, 2, 3, 1, 4]}
-            /> */}
 
-        </div>
+
+    return <div className=''>
+        <BubbleMenu
+            items={items}
+            menuAriaLabel="Toggle navigation"
+            menuBg="#0e0e0e"
+            menuContentColor="#ffffff"
+            useFixedPosition={false}
+            animationEase="back.out(1.5)"
+            animationDuration={0.5}
+            staggerDelay={0.12}
+        />
     </div>
 
 }
