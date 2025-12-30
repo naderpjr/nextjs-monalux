@@ -6,35 +6,35 @@ export default function Navbar() {
     const items = [
         {
             label: 'home',
-            href: '#',
+            href: '/',
             ariaLabel: 'Home',
             rotation: -8,
             hoverStyles: { bgColor: '#3b82f6', textColor: '#ffffff' }
         },
         {
             label: 'about',
-            href: '#',
+            href: '/about',
             ariaLabel: 'About',
             rotation: 8,
             hoverStyles: { bgColor: '#10b981', textColor: '#ffffff' }
         },
         {
             label: 'projects',
-            href: '#',
+            href: '/projects',
             ariaLabel: 'Projects',
             rotation: 8,
             hoverStyles: { bgColor: '#f59e0b', textColor: '#ffffff' }
         },
         {
             label: 'blog',
-            href: '#',
+            href: '/blogs',
             ariaLabel: 'Blog',
             rotation: 8,
             hoverStyles: { bgColor: '#ef4444', textColor: '#ffffff' }
         },
         {
             label: 'contact',
-            href: '#',
+            href: '/contact',
             ariaLabel: 'Contact',
             rotation: -8,
             hoverStyles: { bgColor: '#8b5cf6', textColor: '#ffffff' }
