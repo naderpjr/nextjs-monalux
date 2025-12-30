@@ -1,4 +1,4 @@
-import Shuffle from '@/components/Shuffle';
+
 import GradientText from '@/components/GradientText';
 
 export default function Header() {
