@@ -13,6 +13,7 @@ import {
   Rocket,
   Target,
 } from "lucide-react";
+import GradientBarsPreview from "./gradient-bars-preview";
 const iconComponents = {
   Users: Users,
   Heart: Heart,
@@ -68,7 +69,9 @@ export default function AboutUs1() {
   const missionInView = useInView(missionRef, { once: true, amount: 0.3 });
   const valuesInView = useInView(valuesRef, { once: true, amount: 0.3 });
   return (
+
     <section className="relative w-full overflow-hidden pt-40 bg-black">
+      <GradientBarsPreview />
 
       {/* <Spotlight
         gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(336, 100%, 50%, 0.08) 0, hsla(341, 100%, 55%, 0.04) 50%, hsla(336, 100%, 45%, 0) 80%)"
@@ -180,7 +183,7 @@ export default function AboutUs1() {
                     delay: index * 0.1 + 0.2,
                     ease: "easeOut",
                   }}
-                  whileHover={{ y: -5, scale: 1.02 }}>
+                >
                   <CardHoverEffect
                     icon={<IconComponent className="h-6 w-6" />}
                     title={value.title}

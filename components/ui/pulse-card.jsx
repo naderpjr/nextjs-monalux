@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -80,7 +82,6 @@ export function CardHoverEffect({
   variant = "burgundy",
   size = "md",
   glowEffect = false,
-  hoverScale = 1.02,
   interactive = true,
   showGridLines = true,
 }) {
@@ -90,7 +91,6 @@ export function CardHoverEffect({
   const IconWrapper = interactive ? motion.span : "span";
   return (
     <Div
-      whileHover={interactive ? { scale: hoverScale } : undefined}
       transition={{ duration: 0.3, ease: "easeInOut", type: "keyframes" }}
       className={cn(
         "group relative z-30 w-full cursor-pointer overflow-hidden rounded-2xl",
@@ -105,15 +105,11 @@ export function CardHoverEffect({
         "before:absolute before:inset-0 before:rounded-[inherit] before:content-['']",
         "after:absolute after:inset-0 after:rounded-[inherit] after:content-['']",
         glowEffect && `hover:before:bg-${variantConfig.accent}/10`,
-        // Shadows
-        "shadow-[0px_3px_8px_rgba(0,0,0,0.04),0px_12px_20px_rgba(0,0,0,0.08)]",
-        "hover:shadow-[0px_5px_15px_rgba(0,0,0,0.03),0px_25px_35px_rgba(0,0,0,0.2)]",
-        "dark:shadow-[0px_3px_8px_rgba(0,0,0,0.08),0px_12px_20px_rgba(0,0,0,0.15)]",
-        "dark:hover:shadow-[0px_5px_15px_rgba(0,0,0,0.06),0px_25px_35px_rgba(0,0,0,0.4)]",
+
         className,
       )}
       style={{
-        "--card-color": variantConfig.color,
+        "--card-color": variantConfig.color, height: "300px",
       }}>
       {/* Moving Border */}
       <div
@@ -135,7 +131,6 @@ export function CardHoverEffect({
       {/* Icon */}
       <IconWrapper
         className="relative z-50 table rounded-xl pb-2"
-        whileHover={interactive ? { scale: 1.1 } : undefined}
         transition={{ duration: 0.3, ease: "easeInOut", type: "keyframes" }}>
         <span
           className={cn(
