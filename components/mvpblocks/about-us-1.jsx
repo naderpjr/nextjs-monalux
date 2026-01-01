@@ -71,7 +71,7 @@ export default function AboutUs1() {
   return (
 
     <section className="relative w-full overflow-hidden pt-40 bg-black">
-      <GradientBarsPreview />
+      {/* <GradientBarsPreview /> */}
 
       {/* <Spotlight
         gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(336, 100%, 50%, 0.08) 0, hsla(341, 100%, 55%, 0.04) 50%, hsla(336, 100%, 45%, 0) 80%)"
