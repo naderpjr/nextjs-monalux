@@ -124,7 +124,7 @@ export function CardHoverEffect({
           padding: "2px",
         }}>
         <div
-          className="absolute inset-[-200%] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          className="absolute inset-[-200%] opacity-0 transition-opacity duration-300"
           style={{
             background: `conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 340deg, var(--card-color) 360deg)`,
             animation: "spin 4s linear infinite",

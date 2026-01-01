@@ -24,39 +24,42 @@ const iconComponents = {
 };
 const defaultValues = [
   {
-    title: "Innovation",
+    title: "Creative Problem Solving",
     description:
-      "We constantly push boundaries and explore new possibilities to create cutting-edge solutions.",
+      "We design and develop websites with a strong focus on creativity, solving real problems through clean visuals and smart technical decisions.",
     icon: "Lightbulb",
   },
   {
-    title: "Collaboration",
+    title: "Client-Centered Collaboration",
     description:
-      "We believe in the power of teamwork and diverse perspectives to achieve extraordinary results.",
+      "We work closely with our clients to fully understand their goals and turn their ideas into functional, well-crafted digital products.",
     icon: "Users",
   },
   {
-    title: "Excellence",
+    title: "Quality & Craftsmanship",
     description:
-      "We strive for perfection in everything we do, consistently delivering high-quality work.",
+      "From frontend details to backend logic, we pay close attention to quality, performance, and long-term maintainability.",
     icon: "Sparkles",
   },
   {
-    title: "Impact",
+    title: "Meaningful Digital Impact",
     description:
-      "We measure our success by the positive difference we make in people's lives and businesses.",
+      "Our goal is to build websites that are not only beautiful, but practical, effective, and valuable for real users and businesses.",
     icon: "Globe",
   },
 ];
+
 export default function AboutUs1() {
   const aboutData = {
-    title: "Who We Are ?",
-    subtitle:
-      "Creative Web Development Agency Based in Afghanistan",
+    title: "Who We Are",
+    subtitle: "— A Creative Web Development Agency Based in Afghanistan —",
+
     mission:
-      "Our mission is to democratize web development by providing high-quality, customizable components that help developers build stunning websites quickly and efficiently.",
+      "Our mission is to design and develop modern, beautiful, and functional websites tailored to each client’s needs. We aim to deliver clean design, solid development, and reliable full-stack solutions that help businesses grow online.",
+
     vision:
-      "We envision a world where creating beautiful websites is accessible to everyone, regardless of their design or development experience.",
+      "We envision a digital space where businesses of any size can have access to well-designed, high-quality websites that are fast, user-friendly, and built with care — without unnecessary complexity or exaggeration.",
+
     values: defaultValues,
     className: "relative overflow-hidden py-20",
   };
@@ -107,7 +110,7 @@ export default function AboutUs1() {
               />
 
               <div className="from-primary/20 to-primary/5 mb-6 inline-flex aspect-square h-16 w-16 flex-1 items-center justify-center rounded-2xl bg-linear-to-br backdrop-blur-sm">
-                <Rocket className="text-primary h-8 w-8" />
+                <Rocket className="h-8 w-8 text-primary" />
               </div>
 
               <div className="space-y-4">
@@ -127,14 +130,14 @@ export default function AboutUs1() {
               <BorderBeam
                 duration={8}
                 size={300}
-                className="from-transparent via-blue-500/40 to-transparent"
+                className="via-primary/40 from-transparent to-transparent"
                 reverse
               />
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-blue-500/20 to-blue-500/5 backdrop-blur-sm">
-                <Target className="h-8 w-8 text-blue-500" />
+              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-primary/20 to-primary/5 backdrop-blur-sm">
+                <Target className="h-8 w-8 text-primary" />
               </div>
 
-              <h2 className="mb-4 bg-linear-to-r from-blue-500/90 to-blue-500/70 bg-clip-text text-3xl font-bold text-transparent">
+              <h2 className="mb-4 bg-linear-to-r from-primary/90 to-primary/70 bg-clip-text text-3xl font-bold text-transparent">
                 Our Vision
               </h2>
 
