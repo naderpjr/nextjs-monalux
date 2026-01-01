@@ -51,7 +51,7 @@ const defaultValues = [
 
 export default function AboutUs1() {
   const aboutData = {
-    title: "Who We Are",
+    title: "Our Story",
     subtitle: "— A Creative Web Development Agency Based in Afghanistan —",
 
     mission:
@@ -83,7 +83,7 @@ export default function AboutUs1() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mx-auto mb-16 max-w-2xl text-center">
-          <h1 className="from-foreground/80 via-foreground to-foreground/80 bg-linear-to-r bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl">
+          <h1 className="from-foreground/80 via-foreground to-foreground/80 bg-linear-to-r bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl">
             {aboutData.title}
           </h1>
           <p className="text-muted-foreground mt-6 text-xl">
