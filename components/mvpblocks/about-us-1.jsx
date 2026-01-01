@@ -58,7 +58,7 @@ export default function AboutUs1() {
       "Our mission is to design and develop modern, beautiful, and functional websites tailored to each client’s needs. We aim to deliver clean design, solid development, and reliable full-stack solutions that help businesses grow online.",
 
     vision:
-      "We envision a digital space where businesses of any size can have access to well-designed, high-quality websites that are fast, user-friendly, and built with care — without unnecessary complexity or exaggeration.",
+      "We envision a digital space where businesses of any size can have access to well-designed, high-quality websites that are fast, user-friendly, and built with care without unnecessary complexity or exaggeration.",
 
     values: defaultValues,
     className: "relative overflow-hidden py-20",
@@ -83,7 +83,7 @@ export default function AboutUs1() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mx-auto mb-16 max-w-2xl text-center">
-          <h1 className="from-foreground/80 via-foreground to-foreground/80 bg-linear-to-r bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl">
+          <h1 className="from-primary/90 to-primary/70 pb-4 bg-linear-to-r bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-4xl md:text-5xl">
             {aboutData.title}
           </h1>
           <p className="text-muted-foreground mt-6 text-xl">
@@ -106,15 +106,15 @@ export default function AboutUs1() {
               <BorderBeam
                 duration={8}
                 size={300}
-                className="via-primary/40 from-transparent to-transparent"
+                className="via-[#800020] from-transparent to-transparent"
               />
 
-              <div className="from-primary/20 to-primary/5 mb-6 inline-flex aspect-square h-16 w-16 flex-1 items-center justify-center rounded-2xl bg-linear-to-br backdrop-blur-sm">
+              <div className="from-[#800020]/20 to-[#800020]/5 mb-6 inline-flex aspect-square h-16 w-16 flex-1 items-center justify-center rounded-2xl bg-linear-to-br backdrop-blur-sm">
                 <Rocket className="h-8 w-8 text-primary" />
               </div>
 
               <div className="space-y-4">
-                <h2 className="from-primary/90 to-primary/70 mb-4 bg-linear-to-r bg-clip-text text-3xl font-bold text-transparent">
+                <h2 className="from-primary/90 to-primary/70 mb-4 bg-linear-to-r bg-clip-text text-2xl font-bold text-transparent">
                   Our Mission
                 </h2>
 
@@ -130,14 +130,14 @@ export default function AboutUs1() {
               <BorderBeam
                 duration={8}
                 size={300}
-                className="via-primary/40 from-transparent to-transparent"
+                className="via-[#800020] from-transparent to-transparent"
                 reverse
               />
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-primary/20 to-primary/5 backdrop-blur-sm">
+              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-linear-to-br from-[#800020]/20 to-[#800020]/5 backdrop-blur-sm">
                 <Target className="h-8 w-8 text-primary" />
               </div>
 
-              <h2 className="mb-4 bg-linear-to-r from-primary/90 to-primary/70 bg-clip-text text-3xl font-bold text-transparent">
+              <h2 className="mb-4 bg-linear-to-r from-primary/90 to-primary/70 bg-clip-text text-2xl font-bold text-transparent">
                 Our Vision
               </h2>
 
@@ -156,7 +156,7 @@ export default function AboutUs1() {
             }
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-12 text-center">
-            <h2 className="from-foreground/80 via-foreground to-foreground/80 bg-linear-to-r bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-4xl">
+            <h2 className="from-primary/90 to-primary/70 bg-linear-to-r bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-4xl">
               Our Core Values
             </h2>
             <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-lg">
