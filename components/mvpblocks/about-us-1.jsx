@@ -24,7 +24,7 @@ const iconComponents = {
 };
 const defaultValues = [
   {
-    title: "Creative Problem Solving",
+    title: "Creative Agency",
     description:
       "We design and develop websites with a strong focus on creativity, solving real problems through clean visuals and smart technical decisions.",
     icon: "Lightbulb",
