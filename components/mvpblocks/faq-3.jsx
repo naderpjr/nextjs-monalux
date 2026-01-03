@@ -146,8 +146,8 @@ export default function Faq3() {
             FAQs
           </Badge>
 
-          <h2 className="from-[#800020] mb-3 bg-linear-to-r to-rose-400 bg-clip-text text-3xl font-bold text-transparent">
-            Frequently Asked Questions
+          <h2 className="from-foreground to-foreground/40 mb-4 bg-linear-to-b bg-clip-text text-2xl font-bold text-transparent">
+            Common Questions
           </h2>
           <p className="text-muted-foreground text-sm">
             Everything you need to know about Monalux Studio

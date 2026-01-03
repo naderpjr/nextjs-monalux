@@ -7,48 +7,37 @@ import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 const defaultTestimonials = [
   {
-    text: "MVPBlocks has completely changed the way I build UIs. Copy-paste, done. No more design stress.",
-    imageSrc: "https://i.pravatar.cc",
-    name: "Arjun Mehta",
-    username: "@arjdev",
-    role: "Frontend Developer",
+    text: "Monalux built a professional website for our business that truly represents us. The result exceeded our expectations.",
+    name: "Ahmad Rahimi",
+    role: "Business Owner",
   },
   {
-    text: "Honestly shocked at how smooth the animations and styling are out of the box. Just works.",
-    imageSrc: "https://i.pravatar.cc",
-    name: "Sara Lin",
-    username: "@sara.codes",
-    role: "UX Designer",
+    text: "After launching our website with Monalux, we noticed a clear increase in customer trust and inquiries.",
+    name: "Fatima Akbari",
+    role: "Online Store Owner",
   },
   {
-    text: "Our team launched a client site in 2 days using MVPBlocks. Saved so much time.",
-    imageSrc: "https://i.pravatar.cc",
-    name: "Devon Carter",
-    username: "@devninja",
-    role: "Product Manager",
+    text: "The Monalux team delivered our website quickly and professionally. Communication was smooth from start to finish.",
+    name: "Samiullah Noori",
+    role: "Company Manager",
   },
   {
-    text: "Plugged a few blocks into our existing codebase and everything blended perfectly. Massive W.",
-    imageSrc: "https://i.pravatar.cc",
-    name: "Priya Shah",
-    username: "@priyacodes",
-    role: "Full Stack Developer",
+    text: "Our website looks modern, clean, and works perfectly on all devices. Exactly what our local market needed.",
+    name: "Zahra Mohammadi",
+    role: "Brand Manager",
   },
   {
-    text: "Found a beautiful hero section, dropped it into V0, tweaked copy, and shipped in 15 minutes.",
-    imageSrc: "https://i.pravatar.cc",
-    name: "Leo Martin",
-    username: "@leobuilds",
-    role: "Startup Founder",
+    text: "Monalux didn’t just build a website for us — they helped us establish a strong and credible online presence.",
+    name: "Hamidullah Safi",
+    role: "Entrepreneur",
   },
   {
-    text: "MVPBlocks helped us prototype multiple landing pages without writing CSS once.",
-    imageSrc: "https://i.pravatar.cc",
-    name: "Chloe Winters",
-    username: "@chloewinters",
-    role: "UI Designer",
+    text: "We are very satisfied with the quality, support, and attention to detail Monalux provided throughout the project.",
+    name: "Maryam Qasemi",
+    role: "Service Business Owner",
   },
 ];
+
 export default function TestimonialsCarousel({
   testimonials = defaultTestimonials,
   title = "What our customers say",
@@ -88,12 +77,12 @@ export default function TestimonialsCarousel({
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
           className="relative mb-12 text-center md:mb-16">
-          <h1 className="from-foreground to-foreground/40 mb-4 bg-linear-to-b bg-clip-text text-3xl font-bold text-transparent md:text-5xl lg:text-6xl py-10">
+          <h1 className="from-foreground to-foreground/40 mb-4 bg-linear-to-b bg-clip-text text-2xl font-bold text-transparent md:text-5xl lg:text-6xl py-6">
             {title}
           </h1>
 
           <motion.p
-            className="text-muted-foreground mx-auto max-w-2xl text-base md:text-lg"
+            className="text-muted-foreground px-3 mx-auto max-w-2xl text-base md:text-lg"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -114,10 +103,10 @@ export default function TestimonialsCarousel({
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="border-border  relative h-full w-fit rounded-2xl border bg-linear-to-b p-6 shadow-md backdrop-blur-sm">
+                  className="border-border  relative h-full w-[280] rounded-2xl border bg-linear-to-b p-6 shadow-md backdrop-blur-sm">
                   {/* Enhanced decorative gradients */}
-                  {/* <div className="from-primary/15 to-card absolute -top-5 -left-5 -z-10 h-40 w-40 rounded-full bg-linear-to-b blur-md" />
-                  <div className="from-primary/10 absolute -right-10 -bottom-10 -z-10 h-32 w-32 rounded-full bg-linear-to-t to-transparent opacity-70 blur-xl" /> */}
+                  <div className="from-primary/15 to-card absolute -top-5 -left-5 -z-10 h-40 w-40 rounded-full bg-linear-to-b blur-md" />
+                  <div className="from-primary/10 absolute -right-10 -bottom-10 -z-10 h-32 w-32 rounded-full bg-linear-to-t to-transparent opacity-70 blur-xl" />
 
                   <motion.div
                     initial={{ opacity: 0, y: -5 }}
