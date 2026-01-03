@@ -51,8 +51,8 @@ const defaultTestimonials = [
 ];
 export default function TestimonialsCarousel({
   testimonials = defaultTestimonials,
-  title = "What our users say",
-  subtitle = "From intuitive design to powerful features, our components have become essential tools for developers around the world.",
+  title = "What our customers say",
+  subtitle = "From concept to launch, we design and build high-quality websites tailored for real customers worldwide.",
   autoplaySpeed = 3000,
   className,
 }) {
@@ -81,14 +81,14 @@ export default function TestimonialsCarousel({
         <div className="bg-primary/10 absolute right-1/4 bottom-1/4 h-40 w-40 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="w-full px-0">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
           className="relative mb-12 text-center md:mb-16">
-          <h1 className="from-foreground to-foreground/40 mb-4 bg-linear-to-b bg-clip-text text-3xl font-bold text-transparent md:text-5xl lg:text-6xl">
+          <h1 className="from-foreground to-foreground/40 mb-4 bg-linear-to-b bg-clip-text text-3xl font-bold text-transparent md:text-5xl lg:text-6xl py-10">
             {title}
           </h1>
 
@@ -114,10 +114,10 @@ export default function TestimonialsCarousel({
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="border-border from-secondary/20 to-card relative h-full w-fit rounded-2xl border bg-linear-to-b p-6 shadow-md backdrop-blur-sm">
+                  className="border-border  relative h-full w-fit rounded-2xl border bg-linear-to-b p-6 shadow-md backdrop-blur-sm">
                   {/* Enhanced decorative gradients */}
-                  <div className="from-primary/15 to-card absolute -top-5 -left-5 -z-10 h-40 w-40 rounded-full bg-linear-to-b blur-md" />
-                  <div className="from-primary/10 absolute -right-10 -bottom-10 -z-10 h-32 w-32 rounded-full bg-linear-to-t to-transparent opacity-70 blur-xl" />
+                  {/* <div className="from-primary/15 to-card absolute -top-5 -left-5 -z-10 h-40 w-40 rounded-full bg-linear-to-b blur-md" />
+                  <div className="from-primary/10 absolute -right-10 -bottom-10 -z-10 h-32 w-32 rounded-full bg-linear-to-t to-transparent opacity-70 blur-xl" /> */}
 
                   <motion.div
                     initial={{ opacity: 0, y: -5 }}
@@ -145,16 +145,8 @@ export default function TestimonialsCarousel({
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.4 + index * 0.05 }}
                     viewport={{ once: true }}
-                    className="border-border/40 mt-auto flex items-center gap-3 border-t pt-2">
-                    <Avatar className="border-border ring-primary/10 ring-offset-background h-10 w-10 border ring-2 ring-offset-1">
-                      <AvatarImage
-                        src={testimonial.imageSrc}
-                        alt={testimonial.name}
-                      />
-                      <AvatarFallback>
-                        {testimonial.name.charAt(0)}
-                      </AvatarFallback>
-                    </Avatar>
+                    className="border-border/40 mt-auto flex flex-col gap-3 border-t pt-3">
+
                     <div className="flex flex-col">
                       <h4 className="text-foreground font-medium whitespace-nowrap">
                         {testimonial.name}
