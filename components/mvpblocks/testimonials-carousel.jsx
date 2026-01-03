@@ -77,7 +77,7 @@ export default function TestimonialsCarousel({
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
           className="relative mb-12 text-center md:mb-16">
-          <h1 className="from-foreground to-foreground/40 mb-4 bg-linear-to-b bg-clip-text text-2xl font-bold text-transparent md:text-5xl lg:text-6xl py-6">
+          <h1 className="from-foreground to-foreground/40 mb-4 bg-linear-to-b bg-clip-text text-2xl font-bold text-transparent md:text-4xl lg:text-5xl py-6">
             {title}
           </h1>
 
@@ -105,8 +105,8 @@ export default function TestimonialsCarousel({
                   viewport={{ once: true }}
                   className="border-border  relative h-full w-[280] rounded-2xl border bg-linear-to-b p-6 shadow-md backdrop-blur-sm">
                   {/* Enhanced decorative gradients */}
-                  <div className="from-primary/15 to-card absolute -top-5 -left-5 -z-10 h-40 w-40 rounded-full bg-linear-to-b blur-md" />
-                  <div className="from-primary/10 absolute -right-10 -bottom-10 -z-10 h-32 w-32 rounded-full bg-linear-to-t to-transparent opacity-70 blur-xl" />
+                  <div className="from-[#800020]/50 absolute  -top-3 right-3 -z-10 h-40 w-40 rounded-full bg-linear-to-b blur-md" />
+
 
                   <motion.div
                     initial={{ opacity: 0, y: -5 }}
