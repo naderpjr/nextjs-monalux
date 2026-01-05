@@ -2,6 +2,7 @@ import Beams from "@/components/Beams";
 import CurvedText from "@/components/CurvedText";
 import Header from "@/components/Header";
 import AboutUs1 from "@/components/mvpblocks/about-us-1";
+import BentoGrid1 from "@/components/mvpblocks/bento-grid-1";
 import Faq3 from "@/components/mvpblocks/faq-3";
 import TestimonialsCarousel from "@/components/mvpblocks/testimonials-carousel";
 import Navbar from "@/components/Navbar";
@@ -23,6 +24,7 @@ export default function Home() {
     <Navbar />
     <Header />
     <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-180 bg-linear-to-b from-transparent to-black z-0" />
+    <BentoGrid1 />
     {/* <CurvedText /> */}
     <AboutUs1 />
     <TestimonialsCarousel />
