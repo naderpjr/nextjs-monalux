@@ -1,3 +1,5 @@
+import AscciTextWave from "@/components/Ascii";
+import BallPaint from "@/components/BallPaint";
 import Beams from "@/components/Beams";
 import CurvedText from "@/components/CurvedText";
 import Header from "@/components/Header";

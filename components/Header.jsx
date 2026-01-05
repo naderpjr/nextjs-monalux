@@ -2,7 +2,7 @@
 import GradientText from '@/components/GradientText';
 
 export default function Header() {
-    return <div className='w-screen h-screen flex items-center justify-center font-extrabold'>
+    return <div className='w-screen h-screen flex flex-col items-center justify-center font-extrabold'>
         <GradientText
             colors={["#0e0e0e", "#ffffff", "#0e0e0e"]}
             animationSpeed={5}
@@ -10,5 +10,7 @@ export default function Header() {
         >
             Monalux Studio
         </GradientText>
+
+        <p className='font-normal'>Creative web development agency based in Afghanistan</p>
     </div>
 }
