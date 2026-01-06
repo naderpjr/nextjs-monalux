@@ -10,7 +10,5 @@ export default function Header() {
         >
             Monalux Studio
         </GradientText>
-
-        <p className='font-normal'>Creative web development agency based in Afghanistan</p>
     </div>
 }
