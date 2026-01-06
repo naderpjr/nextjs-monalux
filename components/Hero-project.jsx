@@ -8,21 +8,21 @@ export function HeroProject() {
 export const products = [
     {
         title: "SkyCast Weather App",
-        link: "",
+        link: "https://naderpjr.github.io/SkyCast-weatherapp",
         thumbnail:
             "/skyCast-weather-app.PNG",
     },
     {
-        title: "Cursor",
+        title: "Kabul Blog",
         link: "",
         thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+            "/kabul-blog.png",
     },
     {
-        title: "Rogue",
+        title: "React Movie App",
         link: "",
         thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+            "/react-movies-thumbnail.png",
     },
 
     {
