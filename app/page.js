@@ -1,9 +1,9 @@
-import AscciTextWave from "@/components/Ascii";
-import BallPaint from "@/components/BallPaint";
+
 import Beams from "@/components/Beams";
 import CoverText from "@/components/CoverText";
 import CurvedText from "@/components/CurvedText";
 import Header from "@/components/Header";
+import { HeroProject } from "@/components/Hero-project";
 import AboutUs1 from "@/components/mvpblocks/about-us-1";
 import BentoGrid1 from "@/components/mvpblocks/bento-grid-1";
 import Faq3 from "@/components/mvpblocks/faq-3";
@@ -31,6 +31,7 @@ export default function Home() {
     {/* <BentoGrid1 /> */}
     {/* <CurvedText /> */}
     <AboutUs1 />
+    <HeroProject />
     <TestimonialsCarousel />
     <Faq3 />
   </div>
