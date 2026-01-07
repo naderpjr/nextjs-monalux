@@ -109,7 +109,7 @@ export default function TestimonialsCarousel({
                   viewport={{ once: true }}
                   className="border-border  relative h-full w-[280] rounded-2xl border bg-linear-to-b p-6 shadow-md backdrop-blur-sm">
                   {/* Enhanced decorative gradients */}
-                  <div className="from-[#800020]/50 absolute  -top-3 right-3 -z-10 h-40 w-40 rounded-full bg-linear-to-b blur-md" />
+                  <div className=" absolute  -top-3 right-3 -z-10 h-40 w-40 rounded-full bg-linear-to-b blur-md" />
 
 
                   <motion.div
