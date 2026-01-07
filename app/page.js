@@ -1,6 +1,7 @@
 
 import Beams from "@/components/Beams";
 import CoverText from "@/components/CoverText";
+import { Cta } from "@/components/Cta";
 import CurvedText from "@/components/CurvedText";
 import Header from "@/components/Header";
 import { HeroProject } from "@/components/Hero-project";
@@ -25,7 +26,7 @@ export default function Home() {
         rotation={30}
       />
     </div>
-    <Navbar />
+    {/* <Navbar /> */}
     <Header />
     <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-180 bg-linear-to-b from-transparent to-black z-0" />
     <CoverText />

@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
+import BgDistort from "../BgDistort";
 const defaultTestimonials = [
   {
     text: "Monalux built a professional website for our business that truly represents us. The result exceeded our expectations.",
@@ -64,6 +65,9 @@ export default function TestimonialsCarousel({
   return (
     <section
       className={cn("relative bg-black overflow-hidden py-16 md:py-24", className)}>
+
+      {/* <BgDistort /> */}
+
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.2),transparent_60%)]" />
         <div className="bg-primary/5 absolute top-1/4 left-1/4 h-32 w-32 rounded-full blur-3xl" />
