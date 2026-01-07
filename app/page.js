@@ -1,16 +1,15 @@
 
 import Beams from "@/components/Beams";
 import CoverText from "@/components/CoverText";
-import { Cta } from "@/components/Cta";
 import CurvedText from "@/components/CurvedText";
 import Header from "@/components/Header";
 import { HeroProject } from "@/components/Hero-project";
 import AboutUs1 from "@/components/mvpblocks/about-us-1";
-import BentoGrid1 from "@/components/mvpblocks/bento-grid-1";
 import Faq3 from "@/components/mvpblocks/faq-3";
 import Footer4Col from "@/components/mvpblocks/footer-4col";
 import TestimonialsCarousel from "@/components/mvpblocks/testimonials-carousel";
 import Navbar from "@/components/Navbar";
+
 
 export default function Home() {
   return <div className="">
