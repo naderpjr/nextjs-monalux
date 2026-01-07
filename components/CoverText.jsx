@@ -9,7 +9,7 @@ export default function CoverText() {
                 We build amazing websites <br /> at <Cover>warp speed</Cover>
             </h1>
             <div>
-                <Link href="/" ><NoiseBtn /></Link>
+                <Link href="tel:+93730842693" ><NoiseBtn /></Link>
             </div>
         </div>
     )

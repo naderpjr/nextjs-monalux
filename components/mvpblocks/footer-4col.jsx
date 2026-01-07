@@ -28,7 +28,7 @@ export default function Footer4Col() {
 
     <footer className="bg-black w-full place-self-end rounded-t-xl">
       <div className="mx-auto max-w-7xl px-4 pt-16 pb-6 sm:px-6 lg:px-8 lg:pt-24">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div>
             <div className="text-primary flex justify-center gap-2 sm:justify-start">
               <span className="text-2xl font-semibold">
@@ -55,7 +55,7 @@ export default function Footer4Col() {
             </ul>
           </div>
 
-          <div className="lg:col-span-2 flex justify-center sm:justify-start">
+          <div className=" flex justify-center sm:justify-start">
 
             <div className="w-full max-w-sm text-center sm:text-left">
               <p className="text-lg font-medium">Contact Us</p>
