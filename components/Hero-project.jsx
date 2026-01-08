@@ -45,18 +45,6 @@ export const products = [
             "./mdnotes.png",
     },
     {
-        title: "Inventory Management System",
-        link: "https://inventory-app-five-nu.vercel.app",
-        thumbnail:
-            "/inventory.png",
-    },
-    {
-        title: "Kabul Blog",
-        link: "https://kabul-blog.vercel.app/",
-        thumbnail:
-            "/kabulblog.png",
-    },
-    {
         title: "Positivus Digital Marketing",
         link: "https://positivus-kappa-plum.vercel.app",
         thumbnail:
@@ -93,5 +81,17 @@ export const products = [
         link: "https://naderpjr.github.io/SkyCast-weatherapp",
         thumbnail:
             "/skycast.png",
+    },
+    {
+        title: "Kabul Blog",
+        link: "https://kabul-blog.vercel.app/",
+        thumbnail:
+            "/kabulblog.png",
+    },
+    {
+        title: "Inventory Management System",
+        link: "https://inventory-app-five-nu.vercel.app",
+        thumbnail:
+            "/inventory.png",
     },
 ];
