@@ -1,5 +1,6 @@
 
 import Beams from "@/components/Beams";
+import { CanvasCard } from "@/components/CanvasCard";
 import CoverText from "@/components/CoverText";
 import { CtaSection } from "@/components/Cta";
 import CurvedText from "@/components/CurvedText";
@@ -33,6 +34,7 @@ export default function Home() {
     <AboutUs1 />
     <HeroProject />
     <CtaSection />
+    <CanvasCard />
     <TestimonialsCarousel />
     <Faq3 />
     <Footer4Col />
