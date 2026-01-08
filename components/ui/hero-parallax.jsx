@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
@@ -28,7 +27,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="bg-black min-h-[300vh] h-auto py-40 overflow-hidden  antialiased relative flex flex-col self-auto perspective-[1000px] transform-3d">
+      className="bg-black min-h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto perspective-[1000px] transform-3d">
       <Header />
       <motion.div
         style={{
@@ -61,7 +60,7 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div
-      className="max-w-7xl relative mx-auto py-20 md:py-40 px-5 w-full  left-0 top-0">
+      className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
         The Ultimate <br /> development studio
       </h1>
@@ -87,13 +86,13 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-100 w-200 relative shrink-0">
+      className="group/product h-96 aspect-video relative shrink-0">
       <a href={product.link} className="block group-hover/product:shadow-2xl ">
         <img
           src={product.thumbnail}
           height="600"
           width="600"
-          className="object-cover object-top-left absolute h-full w-full inset-0"
+          className="object-cover object-left-top absolute h-full w-full inset-0"
           alt={product.title} />
       </a>
       <div
