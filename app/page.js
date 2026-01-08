@@ -1,6 +1,7 @@
 
 import Beams from "@/components/Beams";
 import CoverText from "@/components/CoverText";
+import { CtaSection } from "@/components/Cta";
 import CurvedText from "@/components/CurvedText";
 import Header from "@/components/Header";
 import { HeroProject } from "@/components/Hero-project";
@@ -31,6 +32,7 @@ export default function Home() {
     <CoverText />
     <AboutUs1 />
     <HeroProject />
+    <CtaSection />
     <TestimonialsCarousel />
     <Faq3 />
     <Footer4Col />
