@@ -12,6 +12,8 @@ import Footer4Col from "@/components/mvpblocks/footer-4col";
 import TestimonialsCarousel from "@/components/mvpblocks/testimonials-carousel";
 import Navbar from "@/components/Navbar";
 import LiquidEther from '@/components/LiquidEther';
+import FlowMenuSection from "@/components/FlowingMenuSection";
+import TextTitle from "@/components/TextTitle";
 
 
 export default function Home() {
@@ -27,6 +29,8 @@ export default function Home() {
     {/* <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-180 bg-linear-to-b from-transparent to-black z-0" /> */}
     <CoverText />
     <AboutUs1 />
+    <TextTitle />
+    <FlowMenuSection />
     {/* <HeroProject /> */}
     <CtaSection />
     {/* <CanvasCard /> */}
