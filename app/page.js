@@ -26,14 +26,11 @@ export default function Home() {
     </div>
     {/* <Navbar /> */}
     <Header />
-    {/* <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-180 bg-linear-to-b from-transparent to-black z-0" /> */}
     <CoverText />
     <AboutUs1 />
     <TextTitle />
     <FlowMenuSection />
-    {/* <HeroProject /> */}
     <CtaSection />
-    {/* <CanvasCard /> */}
     <TestimonialsCarousel />
     <Faq3 />
     <Footer4Col />
