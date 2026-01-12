@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";;
 import { cn } from "@/lib/utils";
 import {
@@ -155,7 +156,7 @@ export const NoiseBackground = ({
         "shadow-[0px_0.5px_1px_0px_var(--color-neutral-400)_inset,0px_1px_0px_0px_var(--color-neutral-100)]",
         "dark:shadow-[0px_1px_0px_0px_var(--color-neutral-950)_inset,0px_1px_0px_0px_var(--color-neutral-800)]",
         backdropBlur &&
-          "after:absolute after:inset-0 after:h-full after:w-full after:backdrop-blur-lg after:content-['']",
+        "after:absolute after:inset-0 after:h-full after:w-full after:backdrop-blur-lg after:content-['']",
         containerClassName
       )}
       style={
@@ -194,7 +195,7 @@ export const NoiseBackground = ({
         <img
           src="https://assets.aceternity.com/noise.webp"
           alt=""
-          className="h-full w-full object-cover opacity-[var(--noise-opacity)]"
+          className="h-full w-full object-cover opacity-(--noise-opacity)"
           style={{ mixBlendMode: "overlay" }} />
       </div>
       {/* Content */}

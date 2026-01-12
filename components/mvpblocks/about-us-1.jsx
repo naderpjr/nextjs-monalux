@@ -1,8 +1,6 @@
 "use client";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Spotlight } from "@/components/ui/spotlight";
-import { BorderBeam } from "@/components/ui/border-beam";
 import { CardHoverEffect } from "@/components/ui/pulse-card";
 import {
   Globe,
@@ -13,7 +11,7 @@ import {
   Rocket,
   Target,
 } from "lucide-react";
-import GradientBarsPreview from "./gradient-bars-preview";
+
 const iconComponents = {
   Users: Users,
   Heart: Heart,
