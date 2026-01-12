@@ -5,7 +5,6 @@ import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
-import BgDistort from "../BgDistort";
 const defaultTestimonials = [
   {
     text: "Monalux built a professional website for our business that truly represents us. The result exceeded our expectations.",

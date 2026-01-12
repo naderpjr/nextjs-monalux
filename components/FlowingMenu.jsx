@@ -10,7 +10,7 @@ function FlowingMenu({
   bgColor = '#000',
   marqueeBgColor = '#000000',
   marqueeTextColor = '#ffffff',
-  borderColor = '#800020'
+  borderColor = '#ccc'
 }) {
   return (
     <div
