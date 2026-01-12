@@ -7,10 +7,10 @@ function FlowingMenu({
   items = [],
   speed = 15,
   textColor = '#fff',
-  bgColor = '#800020',
+  bgColor = '#000',
   marqueeBgColor = '#000000',
-  marqueeTextColor = '#800020',
-  borderColor = '#fff'
+  marqueeTextColor = '#ffffff',
+  borderColor = '#800020'
 }) {
   return (
     <div
@@ -118,11 +118,30 @@ function MenuItem({ link, text, image, speed, textColor, marqueeBgColor, marquee
 
   return (
     <div
-      className="flex-1 relative overflow-hidden text-center"
+      className=" flex-1 relative overflow-hidden text-center group
+    border border-white/10
+    bg-black
+    transition-all duration-500
+
+    hover:border-transparent"
       ref={itemRef}
       style={{ borderTop: isFirst ? 'none' : `1px solid ${borderColor}` }}>
+      <div className="
+  absolute inset-0
+  opacity-0 group-hover:opacity-100
+  transition-opacity duration-500
+  bg-linear-to-r
+  from-[#800020]
+  via-[#a00030]
+  to-[#500010]
+" />
+
       <a
-        className="flex items-center justify-center h-full relative cursor-pointer uppercase no-underline text-[3vh]"
+        className="  flex items-center justify-center h-full relative cursor-pointer
+    uppercase no-underline text-[3vh]
+    transition-all duration-300
+    group-hover:text-white
+    group-hover:drop-shadow-[0_0_12px_rgba(128,0,32,0.8)]"
         href={link}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
