@@ -1,24 +1,38 @@
 "use client";
 
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect } from "react";
 
-const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 }) => {
+const Lightning = ({
+  hue = 230,
+  xOffset = 0,
+  speed = 1,
+  intensity = 1,
+  size = 1,
+}) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    // تشخیص موبایل
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+    // محدود کردن سایز canvas
     const resizeCanvas = () => {
-      canvas.width = canvas.clientWidth;
-      canvas.height = canvas.clientHeight;
+      const width = canvas.clientWidth;
+      const height = canvas.clientHeight;
+      canvas.width = Math.min(width, 800);
+      canvas.height = Math.min(height, 600);
     };
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener("resize", resizeCanvas);
 
-    const gl = canvas.getContext('webgl');
+    // fallback برای WebGL
+    const gl =
+      canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
     if (!gl) {
-      console.error('WebGL not supported');
+      console.error("WebGL not supported");
       return;
     }
 
@@ -38,8 +52,8 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
       uniform float uSpeed;
       uniform float uIntensity;
       uniform float uSize;
-      
-      #define OCTAVE_COUNT 10
+
+      #define OCTAVE_COUNT ${isMobile ? 5 : 10}
 
       vec3 hsv2rgb(vec3 c) {
           vec3 rgb = clamp(abs(mod(c.x * 6.0 + vec3(0.0,4.0,2.0), 6.0) - 3.0) - 1.0, 0.0, 1.0);
@@ -97,7 +111,7 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
           
           uv += 2.0 * fbm(uv * uSize + 0.8 * iTime * uSpeed) - 1.0;
           
-          float dist = abs(uv.x);
+          float dist = max(abs(uv.x), 0.01); // جلوگیری از صفر شدن
           vec3 baseColor = vec3(200.0/255.0, 20.0/255.0, 60.0/255.0);
           vec3 col = baseColor * pow(mix(0.0, 0.07, hash11(iTime * uSpeed)) / dist, 1.0) * uIntensity;
           col = pow(col, vec3(1.0));
@@ -115,7 +129,7 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
       gl.shaderSource(shader, source);
       gl.compileShader(shader);
       if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-        console.error('Shader compile error:', gl.getShaderInfoLog(shader));
+        console.error("Shader compile error:", gl.getShaderInfoLog(shader));
         gl.deleteShader(shader);
         return null;
       }
@@ -132,7 +146,7 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
     gl.attachShader(program, fragmentShader);
     gl.linkProgram(program);
     if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-      console.error('Program linking error:', gl.getProgramInfoLog(program));
+      console.error("Program linking error:", gl.getProgramInfoLog(program));
       return;
     }
     gl.useProgram(program);
@@ -142,25 +156,23 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
     gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
     gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
 
-    const aPosition = gl.getAttribLocation(program, 'aPosition');
+    const aPosition = gl.getAttribLocation(program, "aPosition");
     gl.enableVertexAttribArray(aPosition);
     gl.vertexAttribPointer(aPosition, 2, gl.FLOAT, false, 0, 0);
 
-    const iResolutionLocation = gl.getUniformLocation(program, 'iResolution');
-    const iTimeLocation = gl.getUniformLocation(program, 'iTime');
-    const uHueLocation = gl.getUniformLocation(program, 'uHue');
-    const uXOffsetLocation = gl.getUniformLocation(program, 'uXOffset');
-    const uSpeedLocation = gl.getUniformLocation(program, 'uSpeed');
-    const uIntensityLocation = gl.getUniformLocation(program, 'uIntensity');
-    const uSizeLocation = gl.getUniformLocation(program, 'uSize');
+    const iResolutionLocation = gl.getUniformLocation(program, "iResolution");
+    const iTimeLocation = gl.getUniformLocation(program, "iTime");
+    const uHueLocation = gl.getUniformLocation(program, "uHue");
+    const uXOffsetLocation = gl.getUniformLocation(program, "uXOffset");
+    const uSpeedLocation = gl.getUniformLocation(program, "uSpeed");
+    const uIntensityLocation = gl.getUniformLocation(program, "uIntensity");
+    const uSizeLocation = gl.getUniformLocation(program, "uSize");
 
     const startTime = performance.now();
-    const render = () => {
-      resizeCanvas();
+    const render = (time) => {
       gl.viewport(0, 0, canvas.width, canvas.height);
       gl.uniform2f(iResolutionLocation, canvas.width, canvas.height);
-      const currentTime = performance.now();
-      gl.uniform1f(iTimeLocation, (currentTime - startTime) / 1000.0);
+      gl.uniform1f(iTimeLocation, (time - startTime) / 1000.0);
       gl.uniform1f(uHueLocation, hue);
       gl.uniform1f(uXOffsetLocation, xOffset);
       gl.uniform1f(uSpeedLocation, speed);
@@ -172,7 +184,7 @@ const Lightning = ({ hue = 230, xOffset = 0, speed = 1, intensity = 1, size = 1 
     requestAnimationFrame(render);
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener("resize", resizeCanvas);
     };
   }, [hue, xOffset, speed, intensity, size]);
 
