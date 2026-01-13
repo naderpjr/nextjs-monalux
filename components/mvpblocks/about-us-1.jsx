@@ -1,25 +1,10 @@
 "use client";
-import { useRef } from "react";
-import { CardHoverEffect } from "@/components/ui/pulse-card";
-import {
-  Globe,
-  Users,
-  Heart,
-  Lightbulb,
-  Sparkles,
-  Rocket,
-  Target,
-} from "lucide-react";
 
-const iconComponents = {
-  Users: Users,
-  Heart: Heart,
-  Lightbulb: Lightbulb,
-  Globe: Globe,
-  Sparkles: Sparkles,
-  Rocket: Rocket,
-  Target: Target,
-};
+import { CardHoverEffect } from "@/components/ui/pulse-card";
+import { Globe, Users, Heart, Lightbulb, Sparkles } from "lucide-react";
+
+const iconComponents = { Users, Heart, Lightbulb, Globe, Sparkles };
+
 const defaultValues = [
   {
     title: "Creative Agency",
@@ -48,58 +33,33 @@ const defaultValues = [
 ];
 
 export default function AboutUs1() {
-  const aboutData = {
-    title: "Our Story",
-    subtitle: "— A Creative Web Development Agency Based in Afghanistan —",
-
-    mission:
-      "Our mission is to design and develop modern, beautiful, and functional websites tailored to each client’s needs. We aim to deliver clean design, solid development, and reliable full-stack solutions that help businesses grow online.",
-
-    vision:
-      "We envision a digital space where businesses of any size can have access to well-designed, high-quality websites that are fast, user-friendly, and built with care without unnecessary complexity or exaggeration.",
-
-    values: defaultValues,
-    className: "relative overflow-hidden py-20",
-  };
-  const valuesRef = useRef(null);
   return (
-
     <section className="relative w-full overflow-hidden pt-40 bg-black">
-      {/* <GradientBarsPreview /> */}
-
-
       <div className="relative z-10 container mx-auto px-4 md:px-6">
+        <div className="mb-24 text-center">
+          <h2 className="from-primary/90 to-primary/70 bg-linear-to-r bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-4xl">
+            Our Core Values
+          </h2>
+          <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-lg">
+            The principles that guide everything we do and every decision we make.
+          </p>
+        </div>
 
-        <div ref={valuesRef} className="mb-24">
-          <div
-            className="mb-12 text-center">
-            <h2 className="from-primary/90 to-primary/70 bg-linear-to-r bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-4xl">
-              Our Core Values
-            </h2>
-            <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-lg">
-              The principles that guide everything we do and every decision we
-              make.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {aboutData.values?.map((value, index) => {
-              const IconComponent = iconComponents[value.icon];
-              return (
-                <div
-                  key={value.title}>
-                  <CardHoverEffect
-                    icon={<IconComponent className="h-6 w-6" />}
-                    title={value.title}
-                    description={value.description}
-                    variant="burgundy"
-                    glowEffect={true}
-                    size="lg"
-                  />
-                </div>
-              );
-            })}
-          </div>
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {defaultValues.map((value) => {
+            const IconComponent = iconComponents[value.icon];
+            return (
+              <CardHoverEffect
+                key={value.title}
+                icon={<IconComponent className="h-6 w-6" />}
+                title={value.title}
+                description={value.description}
+                variant="burgundy"
+                glowEffect={true}
+                size="lg"
+              />
+            );
+          })}
         </div>
       </div>
     </section>
