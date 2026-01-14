@@ -12,14 +12,15 @@ import FlowMenuSection from "@/components/FlowingMenuSection";
 import TextTitle from "@/components/TextTitle";
 import OrbBg from "@/components/OrbBg";
 import LightBg from "@/components/LightBg";
-
+import GridLines from "@/components/GridLines";
 
 export default function Home() {
   return <div className="">
     <div style={{ width: '100%', height: '100vh', position: 'absolute', top: 0, left: 0, zIndex: -1, background: '#000' }}>
-      <OrbBg />
+      {/* <OrbBg /> */}
+      <GridLines />
     </div>
-    {/* <Navbar /> */}
+    <Navbar />
     <Header />
     <CoverText />
     <AboutUs1 />

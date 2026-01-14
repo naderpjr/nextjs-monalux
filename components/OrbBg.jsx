@@ -2,7 +2,7 @@ import Orb from './Orb';
 
 export default function OrbBg() {
     return (
-        <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
+        <div style={{ width: '100%', height: '100vh', position: 'relative' }} className='hidden sm:block'>
             <Orb
                 hoverIntensity={0.5}
                 rotateOnHover={true}
