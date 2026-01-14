@@ -2,9 +2,9 @@
 import React, { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
+import GridLines from '@/components/GridLines';
 const defaultTestimonials = [
   {
     text: "Monalux built a professional website for our business that truly represents us. The result exceeded our expectations.",
@@ -65,7 +65,7 @@ export default function TestimonialsCarousel({
     <section
       className={cn("relative bg-black overflow-hidden py-16 md:py-24", className)}>
 
-      {/* <BgDistort /> */}
+      <GridLines />
 
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.2),transparent_60%)]" />

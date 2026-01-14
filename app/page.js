@@ -9,9 +9,6 @@ import Footer4Col from "@/components/mvpblocks/footer-4col";
 import TestimonialsCarousel from "@/components/mvpblocks/testimonials-carousel";
 import Navbar from "@/components/Navbar";
 import FlowMenuSection from "@/components/FlowingMenuSection";
-import TextTitle from "@/components/TextTitle";
-import OrbBg from "@/components/OrbBg";
-import LightBg from "@/components/LightBg";
 import GridLines from "@/components/GridLines";
 
 export default function Home() {
