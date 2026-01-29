@@ -80,12 +80,12 @@ export default function TestimonialsCarousel({
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
           className="relative mb-12 text-center md:mb-16">
-          <h1 className="from-foreground to-foreground/40 mb-4 bg-linear-to-b bg-clip-text text-2xl font-bold text-transparent md:text-4xl lg:text-5xl py-6">
+          <h1 className="from-foreground to-foreground/40 mb-2 bg-linear-to-b bg-clip-text text-2xl font-bold text-transparent md:text-4xl lg:text-5xl py-3">
             {title}
           </h1>
 
           <motion.p
-            className="text-muted-foreground px-3 mx-auto max-w-2xl text-base md:text-lg"
+            className="text-muted-foreground px-6 mx-auto max-w-2xl text-sm md:text-lg"
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}

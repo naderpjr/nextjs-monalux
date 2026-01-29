@@ -1,7 +1,4 @@
 
-
-
-import { CtaSection } from "@/components/Cta";
 import Header from "@/components/Header";
 import AboutUs1 from "@/components/mvpblocks/about-us-1";
 import Faq3 from "@/components/mvpblocks/faq-3";
@@ -21,7 +18,6 @@ export default function Home() {
     <Header />
     <AboutUs1 />
     {/* <TextTitle /> */}
-    <CtaSection />
     <FlowMenuSection />
     <TestimonialsCarousel />
     <Faq3 />
