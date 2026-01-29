@@ -4,7 +4,7 @@ export default function GridBackground({ children }) {
 
             {/* Grid */}
             <div
-                className="absolute inset-0 opacity-[0.15]"
+                className="absolute inset-0 opacity-[0.7]"
                 style={{
                     backgroundImage: `
             linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),

@@ -1,6 +1,6 @@
 export default function PageFrameGrid() {
     return (
-        <div className="pointer-events-none fixed inset-0 z-50 opacity-50">
+        <div className="pointer-events-none fixed inset-0 z-1 opacity-50">
 
             {/* Top */}
             <div className="w-full absolute top-6 h-px bg-white/20" />

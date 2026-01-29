@@ -1,6 +1,6 @@
 
 
-import CoverText from "@/components/CoverText";
+
 import { CtaSection } from "@/components/Cta";
 import Header from "@/components/Header";
 import AboutUs1 from "@/components/mvpblocks/about-us-1";
@@ -19,7 +19,6 @@ export default function Home() {
     </div>
     <Navbar />
     <Header />
-    <CoverText />
     <AboutUs1 />
     {/* <TextTitle /> */}
     <CtaSection />

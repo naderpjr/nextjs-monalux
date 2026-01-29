@@ -40,7 +40,7 @@ export default function AboutUs1() {
           <h2 className="from-primary/90 to-primary/70 bg-linear-to-r bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-4xl">
             Our Core Values
           </h2>
-          <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-lg">
+          <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-sm">
             The principles that guide everything we do and every decision we make.
           </p>
         </div>
