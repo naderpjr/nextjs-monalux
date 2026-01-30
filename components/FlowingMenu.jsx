@@ -6,7 +6,7 @@ import { gsap } from 'gsap';
 function FlowingMenu({
   items = [],
   speed = 15,
-  textColor = '#fff',
+  textColor = '#D8D8D8',
   bgColor = '#000',
   marqueeBgColor = '#000000',
   marqueeTextColor = '#ffffff',
@@ -118,8 +118,7 @@ function MenuItem({ link, text, image, speed, textColor, marqueeBgColor, marquee
 
   return (
     <div
-      className=" flex-1 relative overflow-hidden text-center group
-    border border-white/10
+      className="font-bold flex-1 relative overflow-hidden text-center
     bg-black
     transition-all duration-500
 
@@ -137,7 +136,7 @@ function MenuItem({ link, text, image, speed, textColor, marqueeBgColor, marquee
 " />
 
       <a
-        className="  flex items-center justify-center h-full relative cursor-pointer
+        className="font-bold text-gray-700 flex items-center justify-center h-full relative cursor-pointer
     uppercase no-underline text-[3vh]
     transition-all duration-300
     group-hover:text-white
@@ -149,13 +148,13 @@ function MenuItem({ link, text, image, speed, textColor, marqueeBgColor, marquee
         {text}
       </a>
       <div
-        className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none translate-y-[101%]"
+        className="absolute font-bold top-0 left-0 w-full h-full overflow-hidden pointer-events-none translate-y-[101%]"
         ref={marqueeRef}
         style={{ backgroundColor: marqueeBgColor }}>
         <div className="h-full w-fit flex" ref={marqueeInnerRef}>
           {[...Array(repetitions)].map((_, idx) => (
             <div
-              className="marquee-part flex items-center shrink-0"
+              className="marquee-part font-bold flex items-center shrink-0"
               key={idx}
               style={{ color: marqueeTextColor }}>
               <span
